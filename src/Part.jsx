@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+import React from 'react';
 
 const Part = ({ part, exercise }) => {
   return (
@@ -6,11 +6,6 @@ const Part = ({ part, exercise }) => {
       {part} {exercise}
     </p>
   );
-};
-
-Part.propTypes = {
-  part: PropTypes.string.isRequired,
-  exercise: PropTypes.number.isRequired,
 };
 
 export default Part;
