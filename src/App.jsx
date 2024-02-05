@@ -1,6 +1,6 @@
-import { Header } from "./Header";
-import { Total } from "./Total";
-import { Content } from "./Content";
+import { Header } from "./Header.jsx";
+import { Content } from "./Content.jsx";
+import { Total } from "./Total.jsx";
 
 const App = () => {
   const course = "Half Stack application development";
@@ -13,20 +13,9 @@ const App = () => {
 
   return (
     <div>
-      <Header course={course} />
-      <Content
-        part1={part1}
-        exercises1={exercises1}
-        part2={part2}
-        exercises2={exercises2}
-        part3={part3}
-        exercises3={exercises3}
-      />
-      <Total
-        exercises1={exercises1}
-        exercises2={exercises2}
-        exercises3={exercises3}
-      />
+      < Header course={course}/>
+      < Content exercises1={exercises1} exercises2={exercises2} exercises3={exercises3} part1={part1} part2={part2} part3={part3} />
+      < Total exercises1={exercises1} exercises2={exercises2} exercises3={exercises3} />
     </div>
   );
 };
