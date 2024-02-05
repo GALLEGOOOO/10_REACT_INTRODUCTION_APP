@@ -1,24 +1,10 @@
-import { Part } from "./Part.jsx";
-
-export const Content = ({
-  partFirstProps,
-  partSecondProps,
-  partThirdProps,
-}) => {
+import { Part } from "./Part.jsx"
+export const Content = ({ part1, exercises1, part2, exercises2, part3, exercises3 }) => {
   return (
-    <>
-      <Part
-        part={partFirstProps.part1}
-        exercise={partFirstProps.exercise1}
-      ></Part>
-      <Part
-        part={partSecondProps.part2}
-        exercise={partSecondProps.exercise2}
-      ></Part>
-      <Part
-        part={partThirdProps.part3}
-        exercise={partThirdProps.exercise3}
-      ></Part>
-    </>
+    <div>
+      <Part part={part1} exercise={exercises1} />
+      <Part part={part2} exercise={exercises2} />
+      <Part part={part3} exercise={exercises3} />
+    </div>
   );
-};
+}

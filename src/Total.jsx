@@ -1,9 +1,5 @@
-export const Total = ({ numbers }) => {
+export const Total = ({exercises1, exercises2, exercises3}) => {
   return (
-    <p>
-      {`Number of exercises: ${
-        numbers.exercises1 + numbers.exercises2 + numbers.exercises3
-      }`}
-    </p>
-  );
-};
+      <p>Number of exercises {exercises1 + exercises2 + exercises3}</p>
+  )
+}
