@@ -1,7 +1,6 @@
-import { Header } from "./Header.jsx";
 import { Content } from "./Content.jsx";
+import { Header } from "./Header.jsx";
 import { Total } from "./Total.jsx";
-
 const App = () => {
   const course = "Half Stack application development";
   const part1 = "Fundamentals of React";
@@ -11,22 +10,19 @@ const App = () => {
   const part3 = "State of a component";
   const exercises3 = 14;
 
+  const partFirstData = { part1, exercises1 };
+  const partSecondData = { part2, exercises2 };
+  const partThirdData = { part3, exercises3 };
+  const numbers = { exercises1, exercises2, exercises3 };
   return (
     <div>
-      <Header course={course} />
+      <Header course={course}></Header>
       <Content
-        exercises1={exercises1}
-        exercises2={exercises2}
-        exercises3={exercises3}
-        part1={part1}
-        part2={part2}
-        part3={part3}
-      />
-      <Total
-        exercises1={exercises1}
-        exercises2={exercises2}
-        exercises3={exercises3}
-      />
+        partFirstProps={partFirstData}
+        partSecondProps={partSecondData}
+        partThirdProps={partThirdData}
+      ></Content>
+      <Total numbers={numbers}></Total>
     </div>
   );
 };
